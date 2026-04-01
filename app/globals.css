@@ -1,6 +1,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-montserrat: var(--font-montserrat);
+  --font-fraunces: var(--font-fraunces);
+  --weight-regular: 500;
+  --weight-bold: 700;
+  --fs-body: 14px;
+  --fs-heading: 32px;
+  --color-black: hsl(212, 21%, 14%);
+  --color-grey: hsl(228, 12%, 48%);
+  --color-green-500: hsl(158, 36%, 37%);
+  --color-green-700: hsl(158, 42%, 18%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,9 +31,19 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.productDetails h1 {
+  font-family: var(--font-fraunces), serif;
+  font-weight: 700;
+} 
+
+.productDetails p {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 500;
 }
 
 * {
@@ -39,4 +61,49 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: var(--weight-regular);
+  color: var(--color-grey);
+  background: var(--color-cream);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.heading-primary {
+  font-family: var(--font-serif), serif;
+  font-size: var(--fs-heading);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.body-text {
+  font-size: var(--fs-body);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.price-current {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: var(--weight-bold);
+  color: var(--color-green-500);
+}
+
+.price-original {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  color: var(--color-grey);
+  text-decoration: line-through;
+  margin-left: 1rem;
 }
